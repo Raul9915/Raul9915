@@ -81,6 +81,8 @@ I work where business questions meet data engineering: I find the problem, build
 | Applied Skills: Implement a Data Science and Machine Learning Solution with Microsoft Fabric | Microsoft | 2024 |
 | Applied Skills: Develop Generative AI Solutions with Azure OpenAI Service | Microsoft | 2024 |
 
+**Specialization Program in Data Science, Machine Learning & Artificial Intelligence** — Universidad Nacional Agraria La Molina, CECAP-FC (2026 · 180 academic hours · Power BI, supervised & unsupervised ML, deep learning, NLP)
+
 **Selected training:** Python Applied to Data Science — PUCP (2024) · Applied Analytics for Executives — Pacífico Business School (2024) · Budgeting & Cash Flow Modeling in Excel — University of Lima (2024) · Big Data: Data-Driven Decisions — University of Navarra (2023) · SQL101x: Introduction to SQL and Relational Databases — UPValenciaX / edX · Data Analytics — IDAT (2022)
 
 ## Publication
