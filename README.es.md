@@ -81,6 +81,8 @@ Trabajo donde las preguntas de negocio se cruzan con la ingeniería de datos: id
 | Applied Skills: Implement a Data Science and Machine Learning Solution with Microsoft Fabric | Microsoft | 2024 |
 | Applied Skills: Develop Generative AI Solutions with Azure OpenAI Service | Microsoft | 2024 |
 
+**Programa de Especialización en Data Science, Machine Learning e Inteligencia Artificial** — Universidad Nacional Agraria La Molina, CECAP-FC (2026 · 180 horas académicas · Power BI, ML supervisado y no supervisado, deep learning, NLP)
+
 **Cursos de especialización:** Python Aplicado a Data Science — PUCP (2024) · Analítica Aplicada para Ejecutivos — Pacífico Business School (2024) · Elaboración de Presupuestos y Flujos de Caja con Excel — Universidad de Lima (2024) · Big Data, Decisiones Basadas en Datos — Universidad de Navarra (2023) · SQL101x: Introducción a SQL y Bases de Datos Relacionales — UPValenciaX / edX · Data Analytics — IDAT (2022)
 
 ## Publicación
