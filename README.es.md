@@ -55,11 +55,24 @@ Trabajo donde las preguntas de negocio se cruzan con la ingeniería de datos: id
 
 ## Proyectos destacados
 
-> 🚧 **Portafolio en desarrollo.** Cada proyecto es un caso de negocio completo (problema → datos → método → dashboard → recomendaciones), construido **solo con datos públicos o sintéticos**. Los enlaces se agregarán a medida que se publique cada repositorio.
+### ⭐ Accounts Receivable Analytics & ETL Pipeline
+
+<a href="https://github.com/Raul9915/accounts-receivable-analytics-pipeline"><img src="https://raw.githubusercontent.com/Raul9915/accounts-receivable-analytics-pipeline/main/images/powerbi_overview.png" alt="Dashboard de Power BI - cartera de cuentas por cobrar" width="100%"/></a>
+
+Pipeline Medallion (Bronze → Silver → Gold) que convierte los reportes mensuales de cuentas por cobrar con formato SAP en un histórico confiable de la cartera, servido desde **SQL Server** a un dashboard de **Power BI**.
+`Python` `DuckDB` `Parquet` `SQL Server (T-SQL)` `Power BI / DAX` `pytest` · **[Ver repositorio →](https://github.com/Raul9915/accounts-receivable-analytics-pipeline)**
+
+- 11 reglas de calidad de datos, registro de rechazados y conciliación entre cada capa
+- Modelo estrella con llaves primarias y foráneas, vistas de reporte y medidas DAX semiaditivas
+- Hallazgo: la cartera creció 14 %, pero la deuda vencida casi se duplicó; el 26 % de los clientes concentra el 80 % del vencido *(datos sintéticos)*
+
+### Hoja de ruta
+
+> Cada proyecto es un caso de negocio completo (problema → datos → método → dashboard → recomendaciones), construido **solo con datos públicos o sintéticos**.
 
 | Proyecto | Pregunta de negocio | Stack | Estado |
 |---|---|---|---|
-| **Accounts Receivable Analytics & ETL Pipeline** | ¿Cómo convertir los archivos crudos de cuentas por cobrar de SAP en una vista histórica y confiable de la cartera? | Python, pandas, DuckDB, Parquet, SQL, Power BI | En progreso |
+| **[Accounts Receivable Analytics & ETL Pipeline](https://github.com/Raul9915/accounts-receivable-analytics-pipeline)** | ¿Cómo convertir los archivos crudos de cuentas por cobrar de SAP en una vista histórica y confiable de la cartera? | Python, DuckDB, Parquet, SQL Server, Power BI | ✅ Publicado |
 | **Credit Risk & Delinquency Analytics** | ¿Qué clientes tienen mayor probabilidad de caer en una morosidad más profunda? | Python, scikit-learn, SQL | Planificado |
 | **Sales & Business Intelligence Dashboard** | ¿Dónde se gana o se pierde ingreso y margen? | Power BI, DAX, Power Query | Planificado |
 | **Customer Segmentation with Machine Learning** | ¿Qué grupos de clientes requieren estrategias comerciales distintas? | Python, K-Means, PCA | Planificado |
