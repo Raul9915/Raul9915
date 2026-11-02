@@ -55,11 +55,24 @@ I work where business questions meet data engineering: I find the problem, build
 
 ## Featured Projects
 
-> 🚧 **Portfolio under active development.** Each project is a complete business case (problem → data → method → dashboard → recommendations) built with **public or synthetic data only**. Links will be added as each repository is published.
+### ⭐ Accounts Receivable Analytics & ETL Pipeline
+
+<a href="https://github.com/Raul9915/accounts-receivable-analytics-pipeline"><img src="https://raw.githubusercontent.com/Raul9915/accounts-receivable-analytics-pipeline/main/images/powerbi_overview.png" alt="Power BI dashboard - Accounts Receivable portfolio" width="100%"/></a>
+
+Medallion pipeline (Bronze → Silver → Gold) that turns monthly SAP-style receivables exports into a trusted portfolio history, served from **SQL Server** to a **Power BI** dashboard.
+`Python` `DuckDB` `Parquet` `SQL Server (T-SQL)` `Power BI / DAX` `pytest` · **[View repository →](https://github.com/Raul9915/accounts-receivable-analytics-pipeline)**
+
+- 11 data-quality rules, rejected-records log and reconciliation checks between every layer
+- Star schema with PK/FK constraints, reporting views and semi-additive DAX measures
+- Insight: the portfolio grew 14% but overdue debt almost doubled; 26% of customers hold 80% of the overdue balance *(synthetic data)*
+
+### Roadmap
+
+> Each project is a complete business case (problem → data → method → dashboard → recommendations) built with **public or synthetic data only**.
 
 | Project | Business question | Stack | Status |
 |---|---|---|---|
-| **Accounts Receivable Analytics & ETL Pipeline** | How do we turn raw SAP receivables files into a trusted, historical portfolio view? | Python, pandas, DuckDB, Parquet, SQL, Power BI | In progress |
+| **[Accounts Receivable Analytics & ETL Pipeline](https://github.com/Raul9915/accounts-receivable-analytics-pipeline)** | How do we turn raw SAP receivables files into a trusted, historical portfolio view? | Python, DuckDB, Parquet, SQL Server, Power BI | ✅ Published |
 | **Credit Risk & Delinquency Analytics** | Which customers are likely to roll into deeper delinquency? | Python, scikit-learn, SQL | Planned |
 | **Sales & Business Intelligence Dashboard** | Where are revenue and margin being won or lost? | Power BI, DAX, Power Query | Planned |
 | **Customer Segmentation with Machine Learning** | Which customer groups deserve different commercial strategies? | Python, K-Means, PCA | Planned |
