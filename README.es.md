@@ -37,9 +37,9 @@ Trabajo donde las preguntas de negocio se cruzan con la ingeniería de datos: id
 | Área | Herramientas |
 |---|---|
 | **Programación y analítica** | Python (pandas, NumPy, matplotlib, seaborn), SQL, R, Jupyter, Excel avanzado |
-| **Business Intelligence** | Power BI, DAX, Power Query, modelado de datos, diseño de KPI |
+| **Business Intelligence** | Power BI, DAX, Power Query, Google Data Studio, modelado de datos, diseño de KPI |
 | **Ingeniería de datos** | ETL/ELT, arquitectura Medallion, Parquet, DuckDB, validación de datos, Power Automate |
-| **Machine Learning e IA** | scikit-learn (clasificación, regresión, Random Forest), pronóstico de series temporales, NLP, Azure OpenAI |
+| **Machine Learning e IA** | scikit-learn (clasificación, regresión, Random Forest, gradient boosting, calibración de probabilidades), pronóstico de series temporales, NLP, Azure OpenAI |
 | **Nube y herramientas empresariales** | SAP, Salesforce CRM, Microsoft Azure, Microsoft Fabric, SharePoint, Git y GitHub |
 
 ## Impacto profesional
@@ -66,6 +66,17 @@ Pipeline Medallion (Bronze → Silver → Gold) que convierte los reportes mensu
 - Modelo estrella con llaves primarias y foráneas, vistas de reporte y medidas DAX semiaditivas
 - Hallazgo: la cartera creció 14 %, pero la deuda vencida casi se duplicó; el 26 % de los clientes concentra el 80 % del vencido *(datos sintéticos)*
 
+### ⭐ Credit Risk & Delinquency Analytics
+
+<a href="https://github.com/Raul9915/credit-risk-delinquency-analytics"><img src="https://raw.githubusercontent.com/Raul9915/credit-risk-delinquency-analytics/main/images/05_strategy_drivers.png" alt="Reporte de Data Studio - estrategia de aprobación y drivers del modelo PD" width="100%"/></a>
+
+Analítica de riesgo crediticio sobre el dataset público de Home Credit (307 mil solicitantes, 58 millones de registros): pipeline Medallion en DuckDB, roll rates de morosidad, cohortes vintage y un modelo calibrado de probabilidad de default (PD), con reporte en **Google Data Studio**.
+`Python` `DuckDB` `SQL` `scikit-learn` `Google Data Studio` `pytest` `GitHub Actions` · **[Ver repositorio →](https://github.com/Raul9915/credit-risk-delinquency-analytics)** · **[Ver reporte →](https://datastudio.google.com/reporting/10911058-bc14-4835-a65a-9f6e37476f98)**
+
+- Matrices de transición mensual de morosidad y curvas vintage Kaplan-Meier (default = 90+ días de atraso)
+- Modelo PD de gradient boosting calibrado: ROC-AUC 0,774 y Gini 0,548 en un conjunto de prueba independiente; las bandas de riesgo A–E van de 1,4 % a 22,0 % de tasa de default
+- Hallazgo: aprobar al 80 % de solicitantes de menor riesgo reduce la tasa de default de la cartera aprobada de 8,07 % a 4,60 % *(política simulada sobre el conjunto de prueba, datos públicos)*
+
 ### Hoja de ruta
 
 > Cada proyecto es un caso de negocio completo (problema → datos → método → dashboard → recomendaciones), construido **solo con datos públicos o sintéticos**.
@@ -73,7 +84,7 @@ Pipeline Medallion (Bronze → Silver → Gold) que convierte los reportes mensu
 | Proyecto | Pregunta de negocio | Stack | Estado |
 |---|---|---|---|
 | **[Accounts Receivable Analytics & ETL Pipeline](https://github.com/Raul9915/accounts-receivable-analytics-pipeline)** | ¿Cómo convertir los archivos crudos de cuentas por cobrar de SAP en una vista histórica y confiable de la cartera? | Python, DuckDB, Parquet, SQL Server, Power BI | ✅ Publicado |
-| **Credit Risk & Delinquency Analytics** | ¿Qué clientes tienen mayor probabilidad de caer en una morosidad más profunda? | Python, scikit-learn, SQL | Planificado |
+| **[Credit Risk & Delinquency Analytics](https://github.com/Raul9915/credit-risk-delinquency-analytics)** | ¿Qué clientes tienen mayor probabilidad de caer en una morosidad más profunda y dónde fijar el punto de corte de aprobación? | Python, DuckDB, SQL, scikit-learn, Data Studio | ✅ Publicado |
 | **Sales & Business Intelligence Dashboard** | ¿Dónde se gana o se pierde ingreso y margen? | Power BI, DAX, Power Query | Planificado |
 | **Customer Segmentation with Machine Learning** | ¿Qué grupos de clientes requieren estrategias comerciales distintas? | Python, K-Means, PCA | Planificado |
 | **Time Series Forecasting** | ¿Cuánto venderemos el próximo trimestre y con qué nivel de confianza? | Python, SARIMA, modelos base de ML | Planificado |
