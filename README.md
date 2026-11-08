@@ -37,9 +37,9 @@ I work where business questions meet data engineering: I find the problem, build
 | Area | Tools |
 |---|---|
 | **Programming & Analytics** | Python (pandas, NumPy, matplotlib, seaborn), SQL, R, Jupyter, Advanced Excel |
-| **Business Intelligence** | Power BI, DAX, Power Query, data modeling, KPI design |
+| **Business Intelligence** | Power BI, DAX, Power Query, Google Data Studio, data modeling, KPI design |
 | **Data Engineering** | ETL/ELT, Medallion architecture, Parquet, DuckDB, data validation, Power Automate |
-| **Machine Learning & AI** | scikit-learn (classification, regression, Random Forest), time series forecasting, NLP, Azure OpenAI |
+| **Machine Learning & AI** | scikit-learn (classification, regression, Random Forest, gradient boosting, probability calibration), time series forecasting, NLP, Azure OpenAI |
 | **Cloud & Enterprise Tools** | SAP, Salesforce CRM, Microsoft Azure, Microsoft Fabric, SharePoint, Git & GitHub |
 
 ## Professional Impact
@@ -66,6 +66,17 @@ Medallion pipeline (Bronze → Silver → Gold) that turns monthly SAP-style rec
 - Star schema with PK/FK constraints, reporting views and semi-additive DAX measures
 - Insight: the portfolio grew 14% but overdue debt almost doubled; 26% of customers hold 80% of the overdue balance *(synthetic data)*
 
+### ⭐ Credit Risk & Delinquency Analytics
+
+<a href="https://github.com/Raul9915/credit-risk-delinquency-analytics"><img src="https://raw.githubusercontent.com/Raul9915/credit-risk-delinquency-analytics/main/images/05_strategy_drivers.png" alt="Data Studio report - approval strategy and PD model drivers" width="100%"/></a>
+
+Credit-risk analytics on the public Home Credit dataset (307K applicants, 58M raw records): a DuckDB Medallion pipeline, delinquency roll rates, vintage cohorts and a calibrated probability-of-default (PD) model, reported in **Google Data Studio**.
+`Python` `DuckDB` `SQL` `scikit-learn` `Google Data Studio` `pytest` `GitHub Actions` · **[View repository →](https://github.com/Raul9915/credit-risk-delinquency-analytics)** · **[Live report →](https://datastudio.google.com/reporting/10911058-bc14-4835-a65a-9f6e37476f98)**
+
+- Monthly delinquency transition matrices and Kaplan-Meier vintage curves (default = 90+ days past due)
+- Calibrated gradient-boosting PD model: ROC-AUC 0.774, Gini 0.548 on a held-out test set; risk bands A–E range from 1.4% to 22.0% default rate
+- Insight: approving the 80% lowest-risk applicants lowers the approved book's default rate from 8.07% to 4.60% *(simulated policy on the held-out test set, public data)*
+
 ### Roadmap
 
 > Each project is a complete business case (problem → data → method → dashboard → recommendations) built with **public or synthetic data only**.
@@ -73,7 +84,7 @@ Medallion pipeline (Bronze → Silver → Gold) that turns monthly SAP-style rec
 | Project | Business question | Stack | Status |
 |---|---|---|---|
 | **[Accounts Receivable Analytics & ETL Pipeline](https://github.com/Raul9915/accounts-receivable-analytics-pipeline)** | How do we turn raw SAP receivables files into a trusted, historical portfolio view? | Python, DuckDB, Parquet, SQL Server, Power BI | ✅ Published |
-| **Credit Risk & Delinquency Analytics** | Which customers are likely to roll into deeper delinquency? | Python, scikit-learn, SQL | Planned |
+| **[Credit Risk & Delinquency Analytics](https://github.com/Raul9915/credit-risk-delinquency-analytics)** | Which customers are likely to roll into deeper delinquency, and where should the approval cut-off be? | Python, DuckDB, SQL, scikit-learn, Data Studio | ✅ Published |
 | **Sales & Business Intelligence Dashboard** | Where are revenue and margin being won or lost? | Power BI, DAX, Power Query | Planned |
 | **Customer Segmentation with Machine Learning** | Which customer groups deserve different commercial strategies? | Python, K-Means, PCA | Planned |
 | **Time Series Forecasting** | How much will we sell next quarter, and how confident are we? | Python, SARIMA, ML baselines | Planned |
